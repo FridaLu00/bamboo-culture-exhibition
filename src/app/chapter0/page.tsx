@@ -661,7 +661,8 @@ export default function Chapter0() {
 
       {/* 视频背景组件 */}
       <VideoBackground
-        src="/video/chapter0.mp4"
+        //src="/video/chapter0.mp4"
+        src="https://liveln-my.sharepoint.com/:v:/g/personal/yitonglu2_ln_hk/IQB5ndLSgZPuQ4hcjquT4QlcAaSNjHWYm-W4W14OORe0hrk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=37oO2J"
         overlayOpacity={50}
         zIndex={{ video: 5, overlay: 6 }}
       />
@@ -765,7 +766,7 @@ export default function Chapter0() {
                 className="w-full h-auto object-contain rounded-lg"
                 controls
                 playsInline
-                src="/video/voice2.mp4"
+                src="https://liveln-my.sharepoint.com/:v:/g/personal/yitonglu2_ln_hk/IQDHA19IGI8dSJegji-MwqmnAYgevptznXpfx7eUmmqvSa4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=pdejV4"
               />
             </div>
             {/* 视频2 */}
@@ -774,7 +775,7 @@ export default function Chapter0() {
                 className="w-full h-auto object-contain rounded-lg"
                 controls
                 playsInline
-                src="/video/voice1.mp4"
+                src="https://liveln-my.sharepoint.com/:v:/g/personal/yitonglu2_ln_hk/IQDWAxNuFdnuS6x4_zILaPkcASRT-PJtdsgru1BymQfj-Ms?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=lciwtq"
               />
             </div>
             {/* 视频3 */}
@@ -783,7 +784,7 @@ export default function Chapter0() {
                 className="w-full h-auto object-contain rounded-lg"
                 controls
                 playsInline
-                src="/video/voice3.mp4"
+                src="https://liveln-my.sharepoint.com/:v:/g/personal/yitonglu2_ln_hk/IQBoUh9nhL5RTqX9xIoU6w1PAR-PtDUDEABNL1vVQF6BGwc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=YuvSSR"
               />
             </div>
           </div>

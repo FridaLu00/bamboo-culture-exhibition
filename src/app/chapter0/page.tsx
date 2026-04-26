@@ -1,5 +1,12 @@
 "use client";
 
+// 为window对象添加echarts属性的类型声明
+declare global {
+  interface Window {
+    echarts: any;
+  }
+}
+
 import { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";

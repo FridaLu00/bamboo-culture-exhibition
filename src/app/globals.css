@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com.cn/css2?family=Noto+Serif+SC:wght@200;300;400;500;600;700;900&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-bamboo: var(--bamboo);
+  --color-bamboo-light: var(--bamboo-light);
+  --color-bamboo-dark: var(--bamboo-dark);
+  --color-ochre: var(--ochre);
+  --color-ochre-light: var(--ochre-light);
+  --color-ivory: var(--ivory);
+  --color-ink: var(--ink);
+  --color-ink-light: var(--ink-light);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --font-sans: "Noto Serif SC", "Songti SC", "SimSun", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-serif: "Noto Serif SC", "Songti SC", "SimSun", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --shadow-2xs: 0 1px 10px 0px hsl(0 0% 0% / 0.03);
+  --shadow-xs: 0 1px 10px 0px hsl(0 0% 0% / 0.03);
+  --shadow-sm: 0 1px 10px 0px hsl(0 0% 0% / 0.05), 0 1px 2px -1px hsl(0 0% 0% / 0.05);
+  --shadow-md: 0 1px 10px 0px hsl(0 0% 0% / 0.05), 0 2px 4px -1px hsl(0 0% 0% / 0.05);
+  --shadow-lg: 0 1px 10px 0px hsl(0 0% 0% / 0.05), 0 4px 6px -1px hsl(0 0% 0% / 0.05);
+  --shadow-xl: 0 1px 10px 0px hsl(0 0% 0% / 0.05), 0 8px 10px -1px hsl(0 0% 0% / 0.05);
+  --shadow-2xl: 0 1px 10px 0px hsl(0 0% 0% / 0.13);
+}
+
+:root {
+  /* 素颜东方色系统 */
+  --background: #F8F6F1;
+  --foreground: #1A1A1A;
+  --card: #FDFCFA;
+  --card-foreground: #1A1A1A;
+  --popover: #FDFCFA;
+  --popover-foreground: #1A1A1A;
+  --primary: #2D4A3E;
+  --primary-foreground: #F8F6F1;
+  --secondary: #E8E4DC;
+  --secondary-foreground: #3D3D3D;
+  --muted: #EDE9E2;
+  --muted-foreground: #363636;
+  --accent: #A0522D;
+  --accent-foreground: #F8F6F1;
+  --destructive: #8B4513;
+  --border: #D4CFC4;
+  --input: #D4CFC4;
+  --ring: #2D4A3E;
+  
+  /* 竹韵专属色 */
+  --bamboo: #2D4A3E;
+  --bamboo-light: #4A6B5A;
+  --bamboo-dark: #1A2F28;
+  --ochre: #A0522D;
+  --ochre-light: #C17A4E;
+  --ivory: #F8F6F1;
+  --ink: #1A1A1A;
+  --ink-light: #4A4A4A;
+  
+  --radius: 0.375rem;
+  --chart-1: #2D4A3E;
+  --chart-2: #4A6B5A;
+  --chart-3: #A0522D;
+  --chart-4: #C17A4E;
+  --chart-5: #6B6B6B;
+  --sidebar: #EDE9E2;
+  --sidebar-foreground: #1A1A1A;
+  --sidebar-primary: #2D4A3E;
+  --sidebar-primary-foreground: #F8F6F1;
+  --sidebar-accent: #E8E4DC;
+  --sidebar-accent-foreground: #1A1A1A;
+  --sidebar-border: #D4CFC4;
+  --sidebar-ring: #2D4A3E;
+}
+
+.dark {
+  --background: #1A1A1A;
+  --foreground: #F8F6F1;
+  --card: #2A2A2A;
+  --card-foreground: #F8F6F1;
+  --popover: #2A2A2A;
+  --popover-foreground: #F8F6F1;
+  --primary: #4A6B5A;
+  --primary-foreground: #1A1A1A;
+  --secondary: #3D3D3D;
+  --secondary-foreground: #F8F6F1;
+  --muted: #3D3D3D;
+  --muted-foreground: #A0A0A0;
+  --accent: #C17A4E;
+  --accent-foreground: #1A1A1A;
+  --destructive: #8B4513;
+  --border: #4A4A4A;
+  --input: #4A4A4A;
+  --ring: #4A6B5A;
+}
+
+@custom-variant dark (&:is(.dark *));
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-serif antialiased;
+    scroll-behavior: smooth;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* ===== 竹韵专属动画 ===== */
+
+@keyframes sway {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes inkSpread {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bambooGrow {
+  from {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+  to {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+}
+
+.animate-sway {
+  animation: sway 4s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-ink-spread {
+  animation: inkSpread 1s ease-out forwards;
+}
+
+.animate-bamboo-grow {
+  animation: bambooGrow 1.2s ease-out forwards;
+}
+
+/* ===== 竖排文字支持 ===== */
+
+.writing-mode-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+/* ===== 自定义滚动条 - 竹韵风格 ===== */
+/* [优化] 合并重复的滚动条样式 */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ivory);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bamboo-light);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bamboo);
+}
+
+/* ===== 选中文字样式 ===== */
+
+::selection {
+  background: var(--bamboo-light);
+  color: var(--ivory);
+}

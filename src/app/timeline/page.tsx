@@ -205,8 +205,8 @@ export default function TimelinePage() {
 
       {/* 优化的视频背景组件 */}
       <VideoBackground
-        /*src="https://f01-1309918226.file.myqcloud.com/768/2026/03/25/%E7%AB%B9%E5%AD%90/%E7%A9%BA%E9%95%9C/%E5%BA%8F%E5%88%97%2004.mp4"*/
-        src="/video/timeline.mp4"
+        src="https://f01-1309918226.file.myqcloud.com/768/2026/03/25/%E7%AB%B9%E5%AD%90/%E7%A9%BA%E9%95%9C/%E5%BA%8F%E5%88%97%2004.mp4"
+        //src="/video/timeline.mp4"
         overlayOpacity={60}
         zIndex={{ video: 5, overlay: 6 }}
       />

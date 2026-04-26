@@ -396,8 +396,8 @@ export default function ChapterOnePage() {
 
       {/* 优化的视频背景组件 */}
       <VideoBackground
-        //src="https://f01-1309918226.file.myqcloud.com/768/2026/03/25/%E7%AB%B9%E5%AD%90/%E7%A9%BA%E9%95%9C/%E7%94%9F.mp4"
-        src="/video/chapter1.mp4"
+        src="https://f01-1309918226.file.myqcloud.com/768/2026/03/25/%E7%AB%B9%E5%AD%90/%E7%A9%BA%E9%95%9C/%E7%94%9F.mp4"
+        //src="/video/chapter1.mp4"
         overlayOpacity={40}
         zIndex={{ video: 5, overlay: 6 }}
       />

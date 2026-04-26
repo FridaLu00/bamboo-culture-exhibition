@@ -345,7 +345,7 @@ function CraftSection({ craft, index }: { craft: typeof crafts[0]; index: number
               <div className="flex-1 h-px bg-gradient-to-r from-border to-transparent" />
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-bamboo mt-1">
-              {'link' in craft ? (
+              {'link' in craft && typeof craft.link === 'string' ? (
                 <a 
                   href={craft.link} 
                   target="_blank" 

@@ -662,7 +662,7 @@ export default function Chapter0() {
       {/* 视频背景组件 */}
       <VideoBackground
         //src="/video/chapter0.mp4"
-        src="https://liveln-my.sharepoint.com/:v:/g/personal/yitonglu2_ln_hk/IQB5ndLSgZPuQ4hcjquT4QlcAaSNjHWYm-W4W14OORe0hrk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=37oO2J"
+        src="https://f01-1309918226.file.myqcloud.com/768/2026/04/26/%E7%AB%B9%E5%AD%90/vedio/chapter0.mp4"
         overlayOpacity={50}
         zIndex={{ video: 5, overlay: 6 }}
       />
@@ -766,7 +766,7 @@ export default function Chapter0() {
                 className="w-full h-auto object-contain rounded-lg"
                 controls
                 playsInline
-                src="https://liveln-my.sharepoint.com/:v:/g/personal/yitonglu2_ln_hk/IQDHA19IGI8dSJegji-MwqmnAYgevptznXpfx7eUmmqvSa4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=pdejV4"
+                src="https://f01-1309918226.file.myqcloud.com/768/2026/04/26/%E7%AB%B9%E5%AD%90/vedio/voice2.mp4"
               />
             </div>
             {/* 视频2 */}
@@ -775,7 +775,7 @@ export default function Chapter0() {
                 className="w-full h-auto object-contain rounded-lg"
                 controls
                 playsInline
-                src="https://liveln-my.sharepoint.com/:v:/g/personal/yitonglu2_ln_hk/IQDWAxNuFdnuS6x4_zILaPkcASRT-PJtdsgru1BymQfj-Ms?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=lciwtq"
+                src="https://f01-1309918226.file.myqcloud.com/768/2026/04/26/%E7%AB%B9%E5%AD%90/vedio/voice1.mp4"
               />
             </div>
             {/* 视频3 */}
@@ -784,7 +784,7 @@ export default function Chapter0() {
                 className="w-full h-auto object-contain rounded-lg"
                 controls
                 playsInline
-                src="https://liveln-my.sharepoint.com/:v:/g/personal/yitonglu2_ln_hk/IQBoUh9nhL5RTqX9xIoU6w1PAR-PtDUDEABNL1vVQF6BGwc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=YuvSSR"
+                src="https://f01-1309918226.file.myqcloud.com/768/2026/04/26/%E7%AB%B9%E5%AD%90/vedio/voice3.mp4"
               />
             </div>
           </div>

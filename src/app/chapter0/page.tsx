@@ -116,8 +116,8 @@ function BambooEcologySection({ bamboo, index }: { bamboo: typeof bambooEcology[
     //"https://f01-1309918226.file.myqcloud.com/768/2026/03/20/%E7%AB%B9%E5%AD%90/%E7%AB%B9%E5%AD%90%E5%9B%BE%E6%96%87%E4%BB%B62/true.jpg?x-cos-traffic-limit=10485760",
     //"https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=800&q=80",
     //"https://images.unsplash.com/photo-1531875456634-3235177e94e4?w=800&q=80"
-    "/picture/maozhu.jpg",
-    "/picture/jianzhu.jpg",
+    "https://f01-1309918226.file.myqcloud.com/768/2026/04/26/%E7%AB%B9%E5%AD%90/badawda1.png",
+    "https://f01-1309918226.file.myqcloud.com/768/2026/04/26/%E7%AB%B9%E5%AD%90/ban2.png",
     "/picture/cizhu.jpg"
   ];
 

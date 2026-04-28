@@ -1,29 +1,38 @@
-# projects
+# 竹文化展览网站
 
-这是一个基于 [Next.js 16](https://nextjs.org) + [shadcn/ui](https://ui.shadcn.com) 的全栈应用项目，由扣子编程 CLI 创建。
+这是一个基于 [Next.js 16](https://nextjs.org) + [shadcn/ui](https://ui.shadcn.com) 的竹文化主题网站，展示中国竹文化的生态、历史、艺术和现代应用。
 
 ## 快速开始
 
-### 启动开发服务器
+### 环境要求
+- Node.js 18+
+- pnpm 9.0.0+
 
+### 安装依赖
 ```bash
-coze dev
+pnpm install
+```
+
+### 启动开发服务器
+```bash
+pnpm exec next dev --webpack --port 5000
 ```
 
 启动后，在浏览器中打开 [http://localhost:5000](http://localhost:5000) 查看应用。
 
 开发服务器支持热更新，修改代码后页面会自动刷新。
 
-### 构建生产版本
+### 停止开发服务器
+在终端中按 `Ctrl + C` 停止开发服务器。
 
+### 构建生产版本
 ```bash
-coze build
+pnpm run build
 ```
 
 ### 启动生产服务器
-
 ```bash
-coze start
+pnpm run start
 ```
 
 ## 项目结构
@@ -34,16 +43,43 @@ src/
 │   ├── layout.tsx           # 根布局组件
 │   ├── page.tsx             # 首页
 │   ├── globals.css          # 全局样式（包含 shadcn 主题变量）
-│   └── [route]/             # 其他路由页面
+│   ├── chapter0/            # 竹韵九州 - 竹文化概述
+│   │   └── page.tsx
+│   ├── chapter1/            # 竹影风物 - 竹的生态与分布
+│   │   └── page.tsx
+│   ├── chapter2/            # 竹林艺韵 - 竹与艺术
+│   │   └── page.tsx
+│   ├── chapter3/            # 竹与生活 - 现代应用
+│   │   └── page.tsx
+│   ├── timeline/            # 竹文化历史时间线
+│   │   └── page.tsx
+│   └── components/          # 自定义组件
+│       ├── BambooBackground.tsx
+│       ├── Logo.tsx
+│       ├── Navigation.tsx
+│       ├── TopNavbar.tsx
+│       └── VideoBackground.tsx
 ├── components/              # React 组件目录
-│   └── ui/                  # shadcn/ui 基础组件（优先使用）
+│   └── ui/                  # shadcn/ui 基础组件
 │       ├── button.tsx
 │       ├── card.tsx
 │       └── ...
 ├── lib/                     # 工具函数库
 │   └── utils.ts            # cn() 等工具函数
-└── hooks/                   # 自定义 React Hooks（可选）
+└── hooks/                   # 自定义 React Hooks
+    └── use-mobile.ts
 ```
+
+## 页面说明
+
+| 页面 | 路径 | 描述 |
+|------|------|------|
+| 首页 | `/` | 网站入口，展示竹文化主题视频 |
+| 竹韵九州 | `/chapter0` | 竹文化概述，包含中国竹分布地图 |
+| 竹影风物 | `/chapter1` | 竹的生态特征与地理分布 |
+| 竹林艺韵 | `/chapter2` | 竹与中国传统艺术（书画、诗词、音乐） |
+| 竹与生活 | `/chapter3` | 竹在现代生活中的应用 |
+| 时间线 | `/timeline` | 竹文化发展历史时间线 |
 
 ## 核心开发规范
 
@@ -331,8 +367,101 @@ export const useStore = create<Store>((set) => ({
 
 推荐使用 Prisma 或 Drizzle ORM，在 `src/lib/db.ts` 中配置。
 
-## 技术栈
+## 部署方法
 
+### 方法1：Netlify 部署（推荐）
+1. **准备代码**：
+   - 确保所有代码已提交到 GitHub 仓库
+   - 确保视频文件已上传到云存储（如 Google Drive、OneDrive）并更新代码中的链接
+
+
+2. **连接 Netlify**：
+   - 登录 [Netlify](https://www.netlify.com/)
+   - 点击 "Add new site" → "Import an existing project"
+   - 选择 GitHub 作为 Git provider
+   - 授权 Netlify 访问你的 GitHub 仓库
+
+3. **配置构建设置**：
+   - **Build command**: `bash ./scripts/build.sh`
+   - **Publish directory**: `.next`
+
+4. **部署**：
+   - 点击 "Deploy site" 开始部署
+   - 等待部署完成（1-3 分钟）
+   - 部署完成后，Netlify 会生成网站 URL
+
+
+5. **自动更新**：
+   - 修改 GitHub 上的代码并推送
+   - Netlify 会自动检测更改并重新部署
+   - 无需手动操作
+
+
+### 方法2：Vercel 部署
+1. **准备代码**：
+   - 确保所有代码已提交到 GitHub 仓库
+   - 确保视频文件已上传到云存储并更新代码中的链接
+
+
+2. **连接 Vercel**：
+   - 登录 [Vercel](https://vercel.com/)
+   - 点击 "Add New Project"
+   - 选择 GitHub 作为 Git provider
+   - 选择你的项目仓库
+
+3. **配置构建设置**：
+   - **Build Command**: `npx next build`
+   - **Output Directory**: `.next`
+
+4. **部署**：
+   - 点击 "Deploy" 开始部署
+   - 等待部署完成
+   - 部署完成后，Vercel 会生成网站 URL
+
+
+### 方法3：GitHub Pages 部署
+1. **准备代码**：
+   - 确保所有代码已提交到 GitHub 仓库
+   - 确保视频文件已上传到云存储并更新代码中的链接
+
+
+2. **创建 GitHub Actions**：
+   - 在项目根目录创建 `.github/workflows/deploy.yml` 文件
+   - 复制以下内容：
+   ```yaml
+   name: Deploy to GitHub Pages
+   on:
+     push:
+       branches: [ main ]
+   jobs:
+     deploy:
+       runs-on: ubuntu-latest
+       steps:
+         - uses: actions/checkout@v3
+         - uses: actions/setup-node@v3
+           with:
+             node-version: 18
+         - run: npm install -g pnpm
+         - run: pnpm install
+         - run: pnpm run build
+         - name: Deploy
+           uses: peaceiris/actions-gh-pages@v3
+           with:
+             github_token: ${{ secrets.GITHUB_TOKEN }}
+             publish_dir: ./out
+   ```
+
+3. **配置 GitHub Pages**：
+   - 进入仓库设置 → Pages
+   - **Source**: 选择 "Deploy from a branch"
+   - **Branch**: 选择 `gh-pages`，**Folder**: 选择 `/`
+   - 点击 "Save"
+
+4. **自动部署**：
+   - 推送代码到 GitHub 后，GitHub Actions 会自动构建并部署
+   - 部署完成后，访问 `https://你的用户名.github.io/仓库名`
+
+## 技术栈
 - **框架**: Next.js 16.1.1 (App Router)
 - **UI 组件**: shadcn/ui (基于 Radix UI)
 - **样式**: Tailwind CSS v4
@@ -349,6 +478,37 @@ export const useStore = create<Store>((set) => ({
 - [Tailwind CSS 文档](https://tailwindcss.com/docs)
 - [React Hook Form](https://react-hook-form.com)
 
+## 视频文件处理
+
+本项目包含多个视频文件，由于 GitHub 文件大小限制（单个文件最大 25MB），视频文件需要单独处理：
+
+### 本地开发
+- 视频文件位于 `public/video/` 目录
+- 开发服务器会自动加载本地视频
+
+### 部署时
+- **方案1**: 使用云存储（推荐）
+  - 上传视频到 Google Drive、OneDrive 或其他云存储服务
+  - 获取视频直链
+  - 修改代码中的视频路径为云存储直链
+
+- **方案2**: 使用 GitHub LFS
+  - 安装 Git LFS: `git lfs install`
+  - 跟踪视频文件: `git lfs track "public/video/*.mp4"`
+  - 提交并推送: `git add . && git commit -m "Add videos" && git push`
+
+### 视频文件清单
+| 文件 | 大小 | 用途 |
+|------|------|------|
+| chapter0.mp4 | ~50MB | 竹韵九州页面背景视频 |
+| chapter1.mp4 | ~50MB | 竹影风物页面背景视频 |
+| chapter2.mp4 | ~50MB | 竹林艺韵页面背景视频 |
+| chapter3.mp4 | ~50MB | 竹与生活页面背景视频 |
+| timeline.mp4 | ~50MB | 时间线页面背景视频 |
+| voice1.mp4 | ~10MB | 语音解说1 |
+| voice2.mp4 | ~10MB | 语音解说2 |
+| voice3.mp4 | ~10MB | 语音解说3 |
+
 ## 重要提示
 
 1. **必须使用 pnpm** 作为包管理器
@@ -356,3 +516,4 @@ export const useStore = create<Store>((set) => ({
 3. **遵循 Next.js App Router 规范**，正确区分服务端/客户端组件
 4. **使用 TypeScript** 进行类型安全开发
 5. **使用 `@/` 路径别名** 导入模块（已配置）
+6. **视频文件**：由于 GitHub 文件大小限制，部署前需要将视频上传到云存储并更新链接
